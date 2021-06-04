@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test:e2e": "start-server-and-test dev 3000 'cypress run'"
+    "test:e2e": "start-server-and-test dev 3000 'cypress run --env coverage=false'",
+    "coverage:e2e": "start-server-and-test dev 3000 'cypress run --env coverage=true'"
   },
   "dependencies": {
     "next": "10.2.3",
@@ -14,18 +15,36 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.9.6",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/cypress": "^1.1.3",
     "@types/cypress-cucumber-preprocessor": "^4.0.0",
     "@types/jest": "^26.0.23",
     "@types/react": "^17.0.9",
+    "babel-plugin-istanbul": "^6.0.0",
     "cucumber": "^7.0.0-rc.0",
     "cypress-cucumber-preprocessor": "^4.1.2",
     "jest": "^27.0.4",
+    "nyc": "^15.1.0",
     "start-server-and-test": "^1.12.3",
     "typescript": "^4.3.2"
   },
+  "license": "MIT",
+  "keywords": [
+    "next.js",
+    "cypress",
+    "code-coverage"
+  ],
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
     "stepDefinitions": "tests/e2e/integration"
+  },
+  "nyc": {
+    "extends": "./.nycrc.json",
+    "report-dir": "cypress-coverage",
+    "reporter": [
+      "json",
+      "lcov"
+    ]
   }
 }
