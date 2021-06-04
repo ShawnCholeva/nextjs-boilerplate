@@ -33,6 +33,7 @@
   "keywords": [
     "next.js",
     "cypress",
+    "cucumber",
     "code-coverage"
   ],
   "cypress-cucumber-preprocessor": {

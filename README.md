@@ -12,30 +12,32 @@ Demo the following technologies that can be used in a NextJS application:
 
 First we need to install the package dependencies by running
 
-```bash
+```
 yarn
 ```
 
 ## Running the development server:
 
-```bash
+```
 yarn dev
 ```
 
 # End-to-end testing
 
+For the e2e tests I chose to do BDD testing utilizing Cucumber and it's Gerkin syntax.
+
 ## Running e2e tests
 
 This command will run our e2e tests in a headless electron browser.
 
-```bash
+```
 yarn test:e2e
 ```
 
 ## Running e2e coverage
 
-This command will run a code coverage report on our e2e tests.
+This command will run our e2e tests in a headless electron browser and generate a code coverage report in the cypress-coverage directory.
 
-```bash
+```
 yarn coverage:e2e
 ```
