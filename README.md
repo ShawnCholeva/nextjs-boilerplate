@@ -24,7 +24,7 @@ yarn dev
 
 # End-to-end testing
 
-For the e2e tests I chose to do BDD testing utilizing Cucumber and it's Gerkin syntax.
+For the e2e tests I chose to do BDD testing utilizing Cucumber.
 
 ## Running e2e tests
 
