@@ -8,5 +8,11 @@ module.exports = (on, config) => {
     typescript: resolve.sync("typescript", { baseDir: config.projectRoot }),
   };
 
+  if (config.env.coverage) {
+    require("@cypress/code-coverage/task")(on, config);
+  }
+
   on("file:preprocessor", cucumber(options));
+
+  return config;
 };
