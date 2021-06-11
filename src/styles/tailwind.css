@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "National Bold";
+    font-weight: 400;
+    src: url("https://media.angi.com/fonts/National/national-2-web-regular");
+  }
+}
